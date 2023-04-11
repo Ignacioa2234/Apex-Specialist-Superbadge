@@ -1,0 +1,5 @@
+global with sharing class WarehouseSyncScheduleJob implements Schedulable{
+    global void execute(SchedulableContext ctx){
+        System.enqueueJob(new WarehouseCalloutService());
+    }
+}
